@@ -1,0 +1,10 @@
+@import '../01.generics/vars';
+
+@mixin row {
+  background: var(--dark-2);
+  color: var(--light);
+  letter-spacing: var(--letter-spacing-min);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border: 1px solid black;
+}

@@ -1,0 +1,60 @@
+@import '../01.generics/vars';
+@import '../02.tools/mixin';
+
+.row {
+  @include row;
+}
+
+.main-projects {
+  &__title {
+    letter-spacing: var(--letter-spacing-max);
+    color: var(--light);
+  }
+
+  &__content {
+    margin-top: 15px;
+    letter-spacing: var(--letter-spacing-min);
+    color: var(--light);
+    padding-right: 40px;
+  }
+
+  &__description {
+    margin: 100px 60px;
+  }
+
+  &__img1, &__img3 {
+    background: url('@/assets/img/lorem.jpg') no-repeat center / 510px;
+  }
+
+  &__img2 {
+    background: url('@/assets/img/lorem.jpg') no-repeat center right / 510px;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      grid-template-areas: "img";
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr;
+    }
+
+    &__img2 {
+      background: url('@/assets/img/lorem.jpg') no-repeat center / 510px;
+    }
+
+    @for $i from 1 through 3 {
+      &__img#{$i} {
+        grid-area: img;
+      }
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__description {
+      width: 85%;
+      margin: 60px auto;
+      text-align: center;
+    }
+  }
+}

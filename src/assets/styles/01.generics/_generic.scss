@@ -1,0 +1,15 @@
+@import '../00.settings/vars';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: $scroll;
+}
+
+body {
+  font-family: $font-family;
+}

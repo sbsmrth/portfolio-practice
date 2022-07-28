@@ -1,0 +1,67 @@
+@import '../01.generics/vars';
+
+.main-links {
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+
+  &__title {
+    width: 60%;
+    margin: 80px auto;
+    font-size: 1rem;
+    padding: 0 3px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--light);
+    line-height: 30px;
+    color: var(--light);
+    letter-spacing: var(--letter-spacing-max);
+    text-transform: uppercase;
+  }
+
+  &__body {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--light);
+    letter-spacing: var(--letter-spacing-min);
+    line-height: 25px;
+  }
+
+  &__icons {
+    display: block;
+    margin: 80px auto;
+    width: max-content;
+
+    & img {
+      height: 70px;
+      width: 70px;
+      margin: 0 15px;
+    }
+  }
+
+  @media (max-width:768px) {
+    &__title {
+      width: 80%;
+      font-size: .9rem;
+      padding-bottom: 10px;
+      margin: 60px auto;
+      line-height: 25px;
+    }
+
+    &__body {
+      width: 80%;
+    }
+
+    &__icons {
+      margin: 60px auto;
+
+      & img {
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+}
